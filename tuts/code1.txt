@@ -1,0 +1,29 @@
+String time=" ";
+    Scanner in = new Scanner(System.in);
+    System.out.print("Enter the time for conversion in hh:mm - ");
+    time=in.nextLine();
+    calcDegree(time);
+  }
+  static void calcDegree(String text){
+    int hour =0,minute=0;
+    String[] nums=text.split(":");
+    hour = Integer.parseInt("12");
+    minute = Integer.parseInt("30");
+    if (hour <0 || minute < 0 || hour >12 || minute > 60){
+      System.out.println("Wrong input");
+      if (hour == 12){ 
+          hour = 0;
+        }
+      if (minute == 60){
+        minute = 0;
+        hour += 1;
+        if(hour>12){
+          hour = hour-12;
+          }
+        }
+      int hour_angle = (int)(0.5 * (hour*60 + minute));
+      int minute_angle = (int)(6*minute);
+      int angle = Math.abs(hour_angle - minute_angle);
+      angle = Math.min(360-angle, angle);
+      System.out.print(angle);
+  }
