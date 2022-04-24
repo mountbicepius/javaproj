@@ -11,7 +11,6 @@ class parent{
     this.val2='0';
   }
 }
-
 class child{
   public static void main(String[] args) {
     parent obj = new parent();// instantiate aami lagiye bachha dilam oh holo german
