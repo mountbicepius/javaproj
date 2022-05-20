@@ -1,22 +1,24 @@
-import static java.lang.System.*;
 
 class car
   {
-    static int modelno;
     private static String enginestandard;
-    private String LicensePlate;
-
-    static void startCar(){
-      out.println("Vroom");
+    car(String engine){
+      this.enginestandard = engine;
     }
+    String getenginestandard(){
+      return this.enginestandard;
+    }
+
   }
 
-class drive
+class drive extends car
   {
+    drive(String s)
+    {
+      super(s);
+    }
     public static void main(String[] args){
-      car.startCar();
-      car obj = new car();
-      car.modelno = 12;
-      out.print(car.modelno);
+      // memory allocation
+      System.out.print(new drive("bs4").getenginestandard());
     }
   }
