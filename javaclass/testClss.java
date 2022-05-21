@@ -2,23 +2,22 @@ import java.util.*;
 
 
 abstract class sample{ // superclass
-	sample(){	
-	}	
+	sample(){
+	}
 	abstract void showName(String name);
 }
 
 /*class testClass extends sample{ //subclass
-	
+
 	String showName(String nam){
 		return nam;
 	}
 }*/
 
 class testClass2 extends sample{
-	
+
 	void showName(String nam){
 		System.out.print("Hi, "+nam);
-		//return "La hai danta hilawa adha ghanta by -"+nam;
 	}
 }
 
@@ -30,4 +29,3 @@ class outputClass extends testClass2{
 		new outputClass().showName(nam1);
 	}
 }
-	
